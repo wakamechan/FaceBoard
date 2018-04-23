@@ -10,11 +10,14 @@ import UIKit
 
 class CustomCell: UICollectionViewCell {
     @IBOutlet weak var imageButton: UIButton!
-    func setCell(name: String) {
+    func setCell(name: String, tagNum: Int) {
         let image = UIImage(named: name)
         imageButton.setImage(image, for: .normal)
+        imageButton.tag = tagNum
     }
     @IBAction func pressButton(_ sender: UIButton) {
-        print("押された")
+        let button = sender as UIButton
+//        print("\(button.tag)の画像が")
+//        print("押された")
     }
 }

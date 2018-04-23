@@ -37,7 +37,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CustomCell
         
         // セルに画像をセットする
-        cell.setCell(name: imageName[indexPath.row])
+        cell.setCell(name: imageName[indexPath.row], tagNum: indexPath.row)
         
         return cell
     }
